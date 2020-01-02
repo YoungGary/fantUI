@@ -1,11 +1,20 @@
 {
   "name": "fant_ui",
   "version": "0.1.0",
-  "private": true,
+  "author":{
+    "name":"Gary",
+    "email":"599045318@qq.com"
+},
+  "private": false,
+  "license":"MIT",
+  "description":"a library of UI components on PC base on Vue.js",
+  "keyWorlds":["vue","libs"],
+  "main":"lib/common.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name fantui --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.4.4",

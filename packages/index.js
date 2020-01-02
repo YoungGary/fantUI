@@ -1,4 +1,5 @@
-import HelloWorld from './HelloWorld';
+/* eslint-disable no-console */
+import HelloWorld from './helloworld';
 // 将引入的组件模块存储，方便循环注册所有组件
 const components = { HelloWorld };
 
