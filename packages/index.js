@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-import HelloWorld from './helloworld';
+
+import Icon from './Icon'
 // 将引入的组件模块存储，方便循环注册所有组件
-const components = { HelloWorld };
+const components = { Icon};
 
 const install = (Vue,options)=>{
     if (install.installed) return;
@@ -19,6 +20,10 @@ const install = (Vue,options)=>{
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
+// 引入总的样式
+import '../style/index.scss';
+//引入 iconfont
+import '../style/iconfont/iconfont'
 
 export default {
     // 使用Vue.use必须具有install方法

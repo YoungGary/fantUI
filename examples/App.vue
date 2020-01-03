@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Demo />
+    <fa-icon name="volume" size="40" />
   </div>
 </template>
 

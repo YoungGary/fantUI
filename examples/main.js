@@ -6,8 +6,10 @@ Vue.config.productionTip = false
 
 //main.js中引入packages
 import libs from "../packages"
-Vue.use(libs,{a:'test'})
 
+Vue.use(libs)
+
+// import '../style/iconfont/iconfont'
 
 new Vue({
   render: h => h(App),

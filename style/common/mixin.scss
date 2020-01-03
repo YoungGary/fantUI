@@ -1,0 +1,11 @@
+//抽象出$namespace方便管理
+@import '../config/config.scss';
+@import '../common/variable.scss';
+
+@mixin b($block) {
+     // !global与!defult相对立, 优先与默认编译  fa-icon
+    $B: $namespace+'-'+$block !global;
+    .#{$B} {
+        @content;
+    }
+}
