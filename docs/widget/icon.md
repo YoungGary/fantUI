@@ -1,9 +1,10 @@
 # 字体图标 使用
 
 
-<ClientOnly>
-  <my-demo />
-</ClientOnly>
+<demo-block>
+  <example-icon  slot="source" ></example-icon>
+  <<< @/docs/.vuepress/components/example/icon.vue
+</demo-block>
 
 
 
