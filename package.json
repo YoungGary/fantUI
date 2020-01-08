@@ -1,6 +1,6 @@
 {
-  "name": "@gary_young/fantui",
-  "version": "0.0.1",
+  "name": "vue-fantui",
+  "version": "0.0.5",
   "author": {
     "name": "Gary",
     "email": "mvpgary@163.com"
@@ -10,14 +10,20 @@
   "description": "a library of UI components on PC base on Vue.js",
   "keyWorlds": [
     "vue",
-    "libs"
+    "library"
   ],
-  "main": "lib/common.umd.min.js",
+  "main": "./lib/fantui.umd.min.js",
+  "files": [
+    "lib/*",
+    "packages/*",
+    "style/*",
+    "*.json"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name @gary_young/fantui --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name fantui --dest lib packages/index.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "publish":"publish --access=public"
