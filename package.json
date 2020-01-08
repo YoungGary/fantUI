@@ -1,9 +1,9 @@
 {
-  "name": "fant_ui",
+  "name": "@gary_young/fantui",
   "version": "0.0.1",
   "author": {
     "name": "Gary",
-    "email": "599045318@qq.com"
+    "email": "mvpgary@163.com"
   },
   "private": false,
   "license": "MIT",
@@ -17,9 +17,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name fantui --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name @gary_young/fantui --dest lib packages/index.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "publish":"publish --access=public"
   },
   "dependencies": {
     "core-js": "^3.4.4",
