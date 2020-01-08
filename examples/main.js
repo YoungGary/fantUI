@@ -5,12 +5,9 @@ Vue.config.productionTip = false
 
 
 //main.js中引入packages
-import libs from "../packages"
-
-Vue.use(libs)
-
-// import '../style/iconfont/iconfont'
-
+import { Toast,Icon} from "../packages/index.js"
+Vue.use(Toast)
+  .use(Icon)
 new Vue({
   render: h => h(App),
 }).$mount('#app')

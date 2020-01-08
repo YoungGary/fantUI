@@ -1,11 +1,46 @@
-//抽象出$namespace方便管理
 @import '../config/config.scss';
 @import '../common/variable.scss';
-
-@mixin b($block) {
-     // !global与!defult相对立, 优先与默认编译  fa-icon
+@mixin declare($block) {
     $B: $namespace+'-'+$block !global;
     .#{$B} {
         @content;
     }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin defineTypes($name) {
+    @each $type in (success,warning,danger,primary) {
+      .#{$name}#{$type} {
+        @include commonStyle($type);
+      }
+    }
+}
+
+@mixin commonStyle($color:'normal') {
+  @if $color== 'success' {
+    $color: $--color-success;
+  }
+  @if $color== 'warning' {
+    $color: $--color-warning;
+  }
+  @if $color== 'danger' {
+    $color: $--color-danger;
+  }
+  @if $color== 'primary' {
+    $color: $--color-primary;
+  }
+  @if $color== 'normal' {
+    $color: $--color-normal;
+  }
+  @if $color== 'disabled' {
+    cursor: not-allowed;
+    $color: $--color-disabled;
+  }
+  color: $color ;
+  border: 1px solid $color;
 }
