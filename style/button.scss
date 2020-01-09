@@ -1,0 +1,23 @@
+@import './common/mixin.scss';
+
+@include declare(button){
+    display: inline-block;
+    padding:$--padding-medium;
+    font-size: $--size-medium;
+    border: 1px solid #dcdfe6;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    border-radius: 4px;
+}
+@include defineButtonSize('fa-button--');
+@include defineButtonType('fa-button--');

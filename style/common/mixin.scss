@@ -60,5 +60,77 @@
     border-top-right-radius: 9px;
     border-bottom-left-radius: 9px;
     background-color:$font-color; 
+  }
 }
+
+// button 
+// large medium small 
+//fa-buton--small
+@mixin defineButtonSize($name) {
+  @each $type in (small ,medium ,large) {
+    .#{$name}#{$type} {
+      @include difButtonSize($type);
+    }
+  }
+}
+// 每个
+@mixin difButtonSize($type) {
+  $font-size:$--size-medium;
+  $padding:$--padding-large;
+  @if $type== 'large' {
+    $font-size: $--size-large;
+    $padding: $--padding-large;
+  }
+  @if $type== 'medium' {
+    $font-size: $--size-medium;
+    $padding: $--padding-medium;
+  }
+  @if $type== 'small' {
+    $font-size: $--size-small;
+    $padding: $--padding-small;
+  }
+  font-size:$font-size;
+  padding: $padding;
+}
+//success,warning,danger,primary
+@mixin defineButtonType($name){
+  @each $type in (success,warning,danger,primary){
+    .#{$name}#{$type}{
+      @include difButtonType($type);
+    }
+  }
+
+}
+
+@mixin difButtonType($type) {
+  $color:white;
+  $border-color:$--color-primary;
+  $bg-color:$--color-primary;
+  $hover-bg-color:$--color-primary;
+  @if $type== 'success' {
+    $border-color: $--color-success;
+    $bg-color:$--color-success;
+    $hover-bg-color:$--color-success;
+  }
+  @if $type== 'warning' {
+    $border-color: $--color-warning;
+    $bg-color:$--color-warning;
+    $hover-bg-color:$--color-warning;
+  }
+  @if $type== 'danger' {
+    $border-color: $--color-danger;
+    $bg-color:$--color-danger;
+    $hover-bg-color:$--color-danger;
+  }
+  @if $type== 'primary' {
+    $border-color: $--color-primary;
+    $bg-color:$--color-primary;
+    $hover-bg-color:$--color-primary;
+  }
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid  $border-color;
+  &:hover{
+    background-color: $hover-bg-color;
+  }
 }

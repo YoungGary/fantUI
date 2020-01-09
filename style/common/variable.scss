@@ -4,14 +4,18 @@ $--color-success:#00bf0d !default;
 $--color-primary:#007eff !default;
 $--color-warning:#FF9600 !default;
 $--color-danger: #ff0024 !default;
+$--color-disabled: #C0C4CC !default;
 //toast 背景色
 $--color-toast-bg-success:#f7fef8 !default;
 $--color-toast-bg-primary:#f4f7fc !default;
 $--color-toast-bg-warning:#fffcf7 !default;
 $--color-toast-bg-danger: #fff7f8 !default;
 
-$--color-disabled: #C0C4CC !default;
-// 定义三种大小的字体
-$--size-big: 16px;
-$--size-nomal: 15px;
+
+// 定义button三种大小的字体 padding 
+$--size-large: 18px;
+$--size-medium: 16px;
 $--size-small: 14px;
+$--padding-large:12px 20px;
+$--padding-medium:10px 20px;
+$--padding-small:9px 15px;

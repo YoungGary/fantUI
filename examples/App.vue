@@ -2,8 +2,20 @@
 
 <template>
   <div id="app">
-    <fa-icon name="volume" size="40" />
-    <button  @click="toast"  >展示</button>
+    <!-- <fa-icon name="volume" size="40" /> -->
+    <!-- <button  @click="toast"  >展示</button> -->
+    <div>
+      <fa-button size="large">大按钮</fa-button>
+    <fa-button size="medium">中按钮</fa-button>
+    <fa-button size="small">小按钮</fa-button>
+    </div>
+    <div>
+    <fa-button>朴素按钮</fa-button>
+    <fa-button  type="primary">基本按钮</fa-button>
+    <fa-button type="danger">危险按钮</fa-button>
+    <fa-button type="warning">警告按钮</fa-button>
+    <fa-button type="success">成功按钮</fa-button>
+    </div>
   </div>
 </template>
 
@@ -17,13 +29,11 @@ export default {
   },
   methods:{
     toast(){
-      // console.log(this)
       this.$showToast({
         message:'错误1111111111111',
         type:'success',
         closeTime:3000
       })
-      // console.log(111)
     }
   }
 }
