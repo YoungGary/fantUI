@@ -1,5 +1,6 @@
 @import '../config/config.scss';
 @import '../common/variable.scss';
+
 @mixin declare($block) {
     $B: $namespace+'-'+$block !global;
     .#{$B} {
@@ -12,35 +13,52 @@
   justify-content: center;
   align-items: center;
 }
-
-@mixin defineTypes($name) {
+@mixin flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+// toast 
+@mixin defineToastTypes($name) {
     @each $type in (success,warning,danger,primary) {
       .#{$name}#{$type} {
-        @include commonStyle($type);
+        @include toastStyle($type);
       }
     }
 }
-
-@mixin commonStyle($color:'normal') {
-  @if $color== 'success' {
-    $color: $--color-success;
+@mixin toastStyle($type:'primary') {
+  $font-color: $--color-primary;
+  $bg-color:$--color-toast-bg-primary;
+  @if $type== 'success' {
+    $font-color: $--color-success;
+    $bg-color:$--color-toast-bg-success;
   }
-  @if $color== 'warning' {
-    $color: $--color-warning;
+  @if $type== 'warning' {
+    $font-color: $--color-warning;
+    $bg-color:$--color-toast-bg-warning;
   }
-  @if $color== 'danger' {
-    $color: $--color-danger;
+  @if $type== 'danger' {
+    $font-color: $--color-danger;
+    $bg-color:$--color-toast-bg-danger;
   }
-  @if $color== 'primary' {
-    $color: $--color-primary;
+  @if $type== 'primary' {
+    $font-color: $--color-primary;
+    $bg-color:$--color-toast-bg-primary;
   }
-  @if $color== 'normal' {
-    $color: $--color-normal;
-  }
-  @if $color== 'disabled' {
-    cursor: not-allowed;
-    $color: $--color-disabled;
-  }
-  color: $color ;
-  border: 1px solid $color;
+  color: $font-color;
+  background-color: $bg-color;
+  opacity: 0.8;
+  border: 1px solid  $font-color;
+  .#{$namespace}-toast__closeButton {
+    width: 26px;
+    height: 22px;
+    @include flexCenter;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    background-color:$font-color; 
+}
 }

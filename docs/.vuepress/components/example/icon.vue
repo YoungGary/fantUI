@@ -1,6 +1,6 @@
 <template>
   <div>
-    <fa-icon name="volume" size="40" />
+    <fa-icon name="volume"  />
   </div>
 </template>
 <script>

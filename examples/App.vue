@@ -3,7 +3,7 @@
 <template>
   <div id="app">
     <fa-icon name="volume" size="40" />
-    <button  @click="showToast"  >展示</button>
+    <button  @click="toast"  >展示</button>
   </div>
 </template>
 
@@ -16,14 +16,14 @@ export default {
     
   },
   methods:{
-    showToast(){
-      
+    toast(){
+      // console.log(this)
       this.$showToast({
         message:'错误1111111111111',
-        type:'danger'
+        type:'success',
+        closeTime:3000
       })
-      // eslint-disable-next-line no-console
-      console.log(111)
+      // console.log(111)
     }
   }
 }

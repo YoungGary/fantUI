@@ -1,10 +1,15 @@
 // 颜色的类型
 // 主色调
-$--color-normal:#ceab70 !default;
-$--color-success:#5fb09c !default;
-$--color-primary:#4f9bdb !default;
-$--color-warning:#FFB90F !default;
-$--color-danger: #e05e5e !default;
+$--color-success:#00bf0d !default;
+$--color-primary:#007eff !default;
+$--color-warning:#FF9600 !default;
+$--color-danger: #ff0024 !default;
+//toast 背景色
+$--color-toast-bg-success:#f7fef8 !default;
+$--color-toast-bg-primary:#f4f7fc !default;
+$--color-toast-bg-warning:#fffcf7 !default;
+$--color-toast-bg-danger: #fff7f8 !default;
+
 $--color-disabled: #C0C4CC !default;
 // 定义三种大小的字体
 $--size-big: 16px;

@@ -1,6 +1,6 @@
 module.exports = {
   title: 'FantUI',
-  description: '一套基于 Vue 2.0 的桌面端组件库',
+  description: '一套基于 Vue 2.x 的桌面端组件库',
   head: [
     
   ],
@@ -34,6 +34,7 @@ module.exports = {
         title: '组件',
         collapsable: false,
         children: [
+          '/widget/iconlist',
           '/widget/icon',
         ]
       }

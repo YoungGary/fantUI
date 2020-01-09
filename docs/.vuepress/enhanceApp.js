@@ -1,5 +1,5 @@
 
-import FantUI from '../../packages/index'
+import FantUI from '../../packages'
 import DemoBlock from './components/demo-block/demo-block'
 
 export default ({

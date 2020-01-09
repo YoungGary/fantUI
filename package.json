@@ -1,13 +1,13 @@
 {
   "name": "vue-fantui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": {
     "name": "Gary",
     "email": "mvpgary@163.com"
   },
   "private": false,
   "license": "MIT",
-  "description": "a library of UI components on PC base on Vue.js",
+  "description": "a library of UI components on PC based on Vue.js",
   "keyWorlds": [
     "vue",
     "library"
@@ -16,8 +16,7 @@
   "files": [
     "lib/*",
     "packages/*",
-    "style/*",
-    "*.json"
+    "style/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
