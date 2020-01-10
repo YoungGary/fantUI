@@ -37,6 +37,29 @@ let fantUI = {
       document.body.appendChild(node.$el);
     }
 
+    //loading
+    Vue.prototype.$showLoading = function (options) {
+      let Component = Vue.extend(Loading);
+      let node  = new Component({
+          propsData:options
+      })
+      node.vm = node.$mount()
+      for (let index = 0; index < document.body.childNodes.length; index++) {
+          const element = document.body.childNodes[index];
+          if (element.className == 'fa-loading') {
+              return
+          }
+      }
+      document.body.appendChild(node.$el)
+    }
+    Vue.prototype.$hideLoading = function(){
+        document.body.childNodes.forEach(item => {
+            if (item.className === 'fa-loading') {
+              document.body.removeChild(item)
+            }
+        })
+    }
+
 
     
   }

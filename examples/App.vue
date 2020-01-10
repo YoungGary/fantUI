@@ -39,7 +39,11 @@
     </div>
     <!-- button loading toast  的 文档  发个版本
     周末 input 日历组件 布局 -->
+
     <!-- <fa-loading  :top="100" :left="100"></fa-loading> -->
+    <div>
+       <fa-button type="primary" @click="show">展示loading</fa-button>
+    </div>
   </div>
 </template>
 
@@ -61,6 +65,12 @@ export default {
     },
     click(){
       console.log(111)
+    },
+    show(){
+      this.$showLoading();
+      setTimeout(()=>{
+        this.$hideLoading();
+      },2000)
     }
   }
 }

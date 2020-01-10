@@ -1,29 +1,30 @@
-# fant_ui
+# vue-fantui
 
-## Project setup
-```
-npm install
-```
+## Install
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+npm install vue-fantui -S
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Quick Start
 
-### Run your tests
-```
-npm run test
-```
+```js
+import Vue from 'vue'
+import fantui from 'vue-fantui'
 
-### Lints and fixes files
-```
-npm run lint
-```
+Vue.use(fantui)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+// or
+import {
+  Icon,
+  Button
+  // ...
+} from 'vue-fantui'
+
+Vue.component(Icon.name, Icon)
+Vue.component(Button.name, Button)
+```
+## Browser Support
+Modern browsers and Internet Explorer 10+.
+
+
