@@ -1,6 +1,6 @@
 @import '../config/config.scss';
 @import '../common/variable.scss';
-
+@import '../common/animation.scss';
 @mixin declare($block) {
     $B: $namespace+'-'+$block !global;
     .#{$B} {
@@ -132,5 +132,28 @@
   border: 1px solid  $border-color;
   &:hover{
     background-color: $hover-bg-color;
+  }
+}
+
+
+@mixin status($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+.fa-shiny {
+  &:after {
+      content: '';
+      position: absolute;
+      animation: bling 1s infinite linear;
+      background-image: linear-gradient(to right, rgb(232, 229, 229), white);
+      left: 0;
+      top: -20px;
+      width: 5px;
+      height: calc(100% + 30px);
+      transform: rotate(-30deg);
   }
 }

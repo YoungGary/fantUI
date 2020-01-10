@@ -1,12 +1,15 @@
 @import './common/mixin.scss';
 
 @include declare(button){
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding:$--padding-medium;
     font-size: $--size-medium;
     border: 1px solid #dcdfe6;
     line-height: 1;
     white-space: nowrap;
+    position: relative;
     cursor: pointer;
     background: #fff;
     color: #606266;
@@ -15,9 +18,39 @@
     box-sizing: border-box;
     outline: none;
     margin: 0;
+    overflow: hidden;
     transition: .1s;
     font-weight: 500;
     border-radius: 4px;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:not(.is-disabled) {
+        &:active {
+            box-shadow: none;
+            opacity: 0.7;
+            transform: translateX(2px) translateY(2px) scale(0.9);
+        }
+    }
+    @at-root {
+        .is-shiny {
+            &:hover {
+                @extend .fa-shiny;
+            }
+        }
+        
+    };
 }
 @include defineButtonSize('fa-button--');
 @include defineButtonType('fa-button--');
+
+@include status(disabled) {
+    cursor: not-allowed;
+    $color: $--color-disabled;
+    // color: $color;
+    opacity: 0.7;
+    border: 1px solid $color;
+
+}
+
+

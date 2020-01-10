@@ -1,15 +1,22 @@
 <template>
   <button class="fa-button"
+  :disabled="disabled"
   :class="[
          buttonSize,
-         buttonType
+         buttonType,
+         {
+          'is-disabled':disabled,
+          'is-shiny':shiny,
+          'is-plain':plain
+        }
   ]"
-  
+  @click="click($event)"
+  @touchstart='touchstart($event)'
   >
+    <fa-icon v-if="icon"  :name="icon"  color="white" style="margin-right:2px;"></fa-icon>
     <slot />
   </button>
 </template>
-
 <script>
 export default {
   name: 'faButton',
@@ -21,6 +28,22 @@ export default {
     },
     //type primary danger warning success
     type:{
+      type:String,
+      default:''
+    },
+    plain:{
+      type:Boolean,
+      default:false
+    },
+    shiny:{
+       type:Boolean,
+       default:false
+    },
+    disabled:{
+      type:Boolean,
+      default:false
+    },
+    icon:{
       type:String,
       default:''
     }
@@ -43,14 +66,27 @@ export default {
         }
       }else{
           return ''
+      }     
+    },
+    iconSize(){
+      let sizes = ["large", "medium", "small"];
+      if (sizes.includes(this.size)) {
+        return  this.size == 'large'? 20:this.size == 'large'?15:14;
       }
-      
-     
+      return 15;
     }
   },
   data() {
     return {
       
+    }
+  },
+  methods:{
+    click(event){
+      this.$emit('click',event)
+    },
+    touchstart(event){
+      this.$emit('touchstart',event)
     }
   }
 }
