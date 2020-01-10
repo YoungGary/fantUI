@@ -25,7 +25,7 @@
     </div>
     <div>
       <fa-button shiny>闪闪发光</fa-button>
-       <fa-button shiny type="primary">闪闪发光</fa-button>
+      <fa-button shiny type="primary">闪闪发光</fa-button>
       <fa-button shiny type="danger">闪闪发光</fa-button>
       <fa-button shiny type="warning">闪闪发光</fa-button>
       <fa-button shiny type="success">闪闪发光</fa-button>
@@ -37,6 +37,9 @@
       <fa-button icon="search" type="warning">图标按钮</fa-button>
       <fa-button icon="search" type="success">图标按钮</fa-button>
     </div>
+    <!-- button loading toast  的 文档  发个版本
+    周末 input 日历组件 布局 -->
+    <!-- <fa-loading  :top="100" :left="100"></fa-loading> -->
   </div>
 </template>
 

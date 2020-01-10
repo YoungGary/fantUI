@@ -1,0 +1,22 @@
+@import './common/mixin.scss';
+
+@include declare(loading) {
+    @include position();
+    &__container{
+        @include position();
+    }
+    .circular{
+        height: 42px;
+        width: 42px;
+        @include position(absolute,50%);
+        animation: rotating 1s linear infinite;
+      }
+      .circular .path {
+        // animation: rotating 1.5s ease-in-out infinite;
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: 0;
+        stroke-width: 2;
+        stroke: $--color-primary;
+        stroke-linecap: round;
+      }
+}

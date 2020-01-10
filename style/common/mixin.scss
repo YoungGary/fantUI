@@ -8,6 +8,15 @@
     }
 }
 
+@mixin position($position:absolute,$dis:0){
+  position: $position;
+    left: $dis;
+    top: $dis;
+    margin: auto;
+    right: $dis;
+    bottom: $dis;
+}
+
 @mixin flexCenter {
   display: flex;
   justify-content: center;
