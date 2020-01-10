@@ -24,6 +24,11 @@ import {
 Vue.component(Icon.name, Icon)
 Vue.component(Button.name, Button)
 ```
+## styles
+```js
+import "vue-fantui/style/index.scss";
+```
+
 ## Browser Support
 Modern browsers and Internet Explorer 10+.
 

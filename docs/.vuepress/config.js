@@ -36,6 +36,9 @@ module.exports = {
         children: [
           '/widget/iconlist',
           '/widget/icon',
+          '/widget/button',
+          '/widget/toast',
+          '/widget/loading',
         ]
       }
     ]
