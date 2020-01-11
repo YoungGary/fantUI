@@ -13,9 +13,27 @@ $--color-toast-bg-danger: #fff7f8 !default;
 
 
 // 定义button三种大小的字体 padding 
-$--size-large: 18px;
-$--size-medium: 16px;
-$--size-small: 14px;
-$--padding-large:12px 20px;
-$--padding-medium:10px 20px;
-$--padding-small:9px 15px;
+$--size-large: 16px;
+$--size-medium: 14px;
+$--size-small: 12px;
+$--padding-large:10px 18px;
+$--padding-medium:9px 16px;
+$--padding-small:8px 14px;
+// 四种type的背景渐变色
+$--button-primary-bg-color:linear-gradient(to bottom, #74b9ff 0%,#48a2ff 30%, #007eff 100%);
+$--button-success-bg-color:linear-gradient(to bottom, #85f38c 0%,#61d568 30%, #00bf0d 100%);
+$--button-warning-bg-color:linear-gradient(to bottom, #fdd49a 0%,#fdc26d 30%, #ff9600 100%);
+$--button-danger-bg-color:linear-gradient(to bottom, #fd90a0 0%,#fd6177 30%, #ff0024 100%);
+// 四种type的背景图片地址 白底的
+$--bg-primary-w-image:url('https://imgkr.cn-bj.ufileos.com/f02a5904-1b1e-4345-901d-eb9bd80a8701.png');
+$--bg-success-w-image:url('https://imgkr.cn-bj.ufileos.com/d018a3dd-9fae-4eb6-ab48-eccd9187afdf.png');
+$--bg-warning-w-image:url('https://imgkr.cn-bj.ufileos.com/37fb3440-1777-4ad7-840c-845295bcc39d.png');
+$--bg-danger-w-image:url('https://imgkr.cn-bj.ufileos.com/209a1afd-ff90-4a32-b7cd-fe2be1154a82.png');
+// 四种type 在plain 样式下的 背景图
+$--bg-primary-image:url('https://imgkr.cn-bj.ufileos.com/5ee5795f-6b99-4ecb-b4d3-b9c52a407fe5.png');
+$--bg-success-image:url('https://imgkr.cn-bj.ufileos.com/30e7ac72-28c5-4ccb-a23b-ee1e569afafd.png');
+$--bg-warning-image:url('https://imgkr.cn-bj.ufileos.com/e1ccae97-c5f0-41a7-bec4-de07e5037d25.png');
+$--bg-danger-image:url('https://imgkr.cn-bj.ufileos.com/8ac60b63-14ca-4aaa-8421-f7078c47edff.png');
+// 四种type 在plain 样式下的 文字颜色 和 主色调一样
+
+

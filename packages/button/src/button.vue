@@ -13,7 +13,7 @@
   @click="click($event)"
   @touchstart='touchstart($event)'
   >
-    <fa-icon v-if="icon"  :name="icon"  color="white" style="margin-right:2px;"></fa-icon>
+    <fa-icon v-if="icon"  :name="icon"  :color="iconColor" style="margin-right:2px;"></fa-icon>
     <slot />
   </button>
 </template>
@@ -74,6 +74,13 @@ export default {
         return  this.size == 'large'? 20:this.size == 'large'?15:14;
       }
       return 15;
+    },
+    iconColor(){
+      if (this.type) {
+        return 'white'
+      }else{
+        return 'black'
+      }
     }
   },
   data() {

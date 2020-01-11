@@ -116,31 +116,63 @@
   $border-color:$--color-primary;
   $bg-color:$--color-primary;
   $hover-bg-color:$--color-primary;
+  $bg-image:$--bg-primary-w-image;
   @if $type== 'success' {
-    $border-color: $--color-success;
-    $bg-color:$--color-success;
+    $bg-color:$--button-success-bg-color;
     $hover-bg-color:$--color-success;
+    $bg-image:$--bg-success-w-image;
   }
   @if $type== 'warning' {
-    $border-color: $--color-warning;
-    $bg-color:$--color-warning;
+    $bg-color:$--button-warning-bg-color;
     $hover-bg-color:$--color-warning;
+    $bg-image:$--bg-warning-w-image;
   }
   @if $type== 'danger' {
-    $border-color: $--color-danger;
-    $bg-color:$--color-danger;
+    $bg-color:$--button-danger-bg-color;
     $hover-bg-color:$--color-danger;
+    $bg-image:$--bg-danger-w-image;
   }
   @if $type== 'primary' {
-    $border-color: $--color-primary;
-    $bg-color:$--color-primary;
+    $bg-color:$--button-primary-bg-color;
     $hover-bg-color:$--color-primary;
+    $bg-image:$--bg-primary-w-image;
   }
   color: $color;
-  background-color: $bg-color;
-  border: 1px solid  $border-color;
-  &:hover{
-    background-color: $hover-bg-color;
+  /*不支持渐变色的浏览器就默认 primary颜色 否则就是渐变色*/
+  background: $hover-bg-color;
+  background: $bg-image 60px 60px no-repeat , $bg-color;
+  background-position: bottom left;
+  &.is-plain{
+    @if $type== 'success' {
+
+      $border-color: $--color-success;
+      $color:$--color-success;
+      $hover-bg-color:white;
+      $bg-image:$--bg-success-image;
+    }
+    @if $type== 'warning' {
+       $border-color: $--color-warning;
+      $color:$--color-warning;
+      $hover-bg-color:white;
+      $bg-image:$--bg-warning-image;
+    }
+    @if $type== 'danger' {
+      $border-color: $--color-danger;
+      $color:$--color-danger;
+      $hover-bg-color:white;
+      $bg-image:$--bg-danger-image;
+    }
+    @if $type== 'primary' {
+      $border-color: $--color-primary;
+      $color:$--color-primary;
+      $hover-bg-color:white;
+      $bg-image:$--bg-primary-image;
+    }
+    color: $color;
+    border: 1px solid $border-color;
+    background: $hover-bg-color;
+    background: $bg-image 60px 60px no-repeat , $hover-bg-color;
+    background-position: bottom left;
   }
 }
 
