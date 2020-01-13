@@ -9,7 +9,6 @@
   </div>
 </template>
 <script>
-
 export default {
   data () {
     return {
@@ -184,7 +183,10 @@ export default {
     }
   },
   components:{
-      
+    
+  },
+  mounted () {
+    import('./iconfont.js').then(icon => {})
   },
   methods:{
       copy(item){

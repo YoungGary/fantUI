@@ -142,7 +142,6 @@
   background: $hover-bg-color;
   background: $bg-image 60px 60px no-repeat , $bg-color;
   background-position: bottom left;
-  
   &.is-plain{
     @if $type== 'success' {
       $border-color: $--color-success;

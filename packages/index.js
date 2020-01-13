@@ -7,7 +7,7 @@ import Loading from './loading'
 // 引入样式
 import '../style/index.scss';
 //引入 iconfont
-import '../style/iconfont/iconfont'
+// import '../style/iconfont/iconfont'
 
 const components = [Icon,Toast,Button,Loading] ;
 
