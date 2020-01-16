@@ -45,22 +45,41 @@
       <fa-button icon="search" type="success">图标按钮</fa-button>
     </div>
     <!-- button loading toast  的 文档  发个版本
-    周末 input 日历组件 布局 -->
-
-    <!-- <fa-loading  :top="100" :left="100"></fa-loading> -->
-    <div>
+    next: input 日历组件 布局 -->
+    <div class="margintop">
        <fa-button type="primary" @click="show">展示loading</fa-button>
     </div>
+    <div class="margintop">
+      <fa-input size="large" placeholder="请输入"></fa-input>      
+    </div>
+    <div class="margintop">
+      <fa-input size="normal" style="width:400px" placeholder="请输入" ></fa-input>
+      
+    </div>
+    <div class="margintop">
+      <fa-input size="small" placeholder="请输入"></fa-input>
+      
+    </div>
+    <div class="margintop">
+      <fa-input disabled placeholder="禁止"></fa-input>
+      
+    </div>
+    <div class="margintop">
+      <fa-input clearable  placeholder="可清空的"  v-model="large"></fa-input>
+    </div>
+    {{large}}
   </div>
 </template>
-
 <script>
-
-
 export default {
   name: 'app',
   components: {
     
+  },
+  data(){
+    return{
+      large:''
+    }
   },
   methods:{
     toast(){

@@ -4,12 +4,13 @@ import Toast from './toast'
 import ToastVue from './toast/src/index'
 import Button from './button'
 import Loading from './loading'
+import Input from './input'
 // 引入样式
 import '../style/index.scss';
 //引入 iconfont
-// import '../style/iconfont/iconfont'
+import '../style/iconfont/iconfont'
 
-const components = [Icon,Toast,Button,Loading] ;
+const components = [Icon,Toast,Button,Loading,Input] ;
 
 let fantUI = {
   install(Vue) {

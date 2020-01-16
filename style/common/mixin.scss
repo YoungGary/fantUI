@@ -17,6 +17,19 @@
     bottom: $dis;
 }
 
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
 @mixin flexCenter {
   display: flex;
   justify-content: center;
