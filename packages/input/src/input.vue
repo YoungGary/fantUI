@@ -192,7 +192,7 @@ export default {
         minRows,
         maxRows
       );
-      console.log(this.textareaCalcStyle)
+      // console.log(this.textareaCalcStyle)
     },
     calculateNodeStyling(el) {
       window.hiddenTextarea.value = this.value;
