@@ -5,20 +5,18 @@
     display: inline-flex;
     height: 36px;
     line-height: 36px;
-    width: 180px;
     position: relative;
     align-items: center;
     background-color: white;
-    border: 1px solid #DCDFE6;
-    border-radius: 4px;
-    
+    // border: 1px solid #DCDFE6;
+    // border-radius: 4px;
     @include declare(input__inner) {
         flex: 1;
         width: 100%;
         font-size: 1em;
         padding: 0px 15px;
         height: 100%;
-        border:0;
+        border: 1px solid #DCDFE6;
         border-radius: 4px;
         cursor: pointer;
         &:hover {border:1px solid $--color-input-placeholder }
@@ -58,7 +56,7 @@
         }
         
     }
-    &.fa-input__suffix_right{
+    &.fa-input__suffix_right,&.fa-input__suffix_clear{
         @include declare(input__inner) {
             padding-right: 30px;
         }
@@ -67,6 +65,68 @@
             position: absolute;
             right: 10px;
             @include flexCenter()
+        }
+    }
+    &.fa-input__suffix_clear.fa-input__suffix_right{
+        @include declare(input__inner) {
+            padding-right: 45px;
+        }
+        .fa-input__clearable{
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            @include flexCenter()
+        }
+    }
+    &.fa-input__suffix_left{
+        @include declare(input__inner) {
+            padding-left: 30px;
+        }
+        .fa-input__suffix{
+            position: absolute;
+            left: 10px;
+            @include flexCenter();
+        }
+        
+    }
+    // slot
+    .fa-input__suffix{
+        position: absolute;
+        left: 10px;
+        @include flexCenter();
+        
+    }
+    &:not(.is-textarea) {
+        width:180px;
+    }
+    //textarea
+    &.is-textarea{
+       min-width: 180px;
+       height: 100%;
+    }
+    @include declare(textarea__inner) {
+        flex: 1;
+        padding: 5px 15px;
+        line-height: 1.5;
+        box-sizing: border-box;
+        width: 100%;
+        font-size: inherit;
+        color: #606266;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #dcdfe6;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {border:1px solid $--color-input-placeholder }
+        &:focus {border:1px solid $--color-primary }
+        &.fa-input--textarea__disabled{
+            background-color: #f5f7fa;
+            border-color: #e4e7ed;
+            color: #c0c4cc;
+            cursor: not-allowed;
+        }
+        @include placeholder{
+            color: $--color-input-placeholder;
         }
     }
 }
