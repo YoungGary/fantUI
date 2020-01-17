@@ -23,6 +23,9 @@ export default {
         large4:"",
     }
   },
+  mounted () {
+    import('./iconfont.js').then(icon => {})
+  },
   methods:{
 
   }

@@ -11,6 +11,9 @@ export default {
 
     }
   },
+  mounted () {
+    import('./iconfont.js').then(icon => {})
+  },
   methods:{
 
   }
