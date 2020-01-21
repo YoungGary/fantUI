@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>{{ msg }}</div>
-    <div>{{ proData }}</div>
   </div>
 </template>
 
@@ -9,10 +8,7 @@
 export default {
   name: 'Demo',
   props: {
-    proData: {
-      type: String,
-      default: '我是默认值'
-    }
+    
   },
   data() {
     return {
@@ -21,7 +17,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  @import "../../assets/styles/index.scss";
-</style>

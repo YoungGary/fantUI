@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
-
 <template>
   <div id="app">
-   <fa-date-picker v-model="date"></fa-date-picker>
-   <fa-button>123</fa-button>  
+   <fa-date-picker v-model="date" ></fa-date-picker>
+   <fa-button>{{date}}</fa-button>  
   </div>
 </template>
 <script>
@@ -14,7 +13,7 @@ export default {
   },
   data(){
     return{
-      date: new Date()
+      date: ''
     }
   },
   methods:{

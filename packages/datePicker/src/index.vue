@@ -1,7 +1,7 @@
 /* eslint-disable vue/valid-v-bind */
 <template>
   <div class="fa-datepicker" v-check-outside>
-    <fa-input v-model="formatValue"></fa-input>
+    <fa-input v-model="formatValue" readonly :placeholder="placeholder"></fa-input>
     <div class="fa-datepicker__select" v-if="visiable">
       <div class="fa-datepicker__select__nav">
         <div>&lt;</div>
@@ -26,13 +26,21 @@
 </template>
 
 <script>
-import { getYearMonthDay,getDate } from "../../utils/dateUtils";
+import { getYearMonthDay,getDate ,dateFormat} from "../../utils/dateUtils";
 export default {
   name: 'faDatePicker',
   props: {
     value:{
-      type:Date,
-      default:()=>new Date()
+      type:[Date,String],
+      default:()=>''
+    },
+    placeholder:{
+      type:String,
+      default:()=>''
+    },
+    valueFormat:{
+      type:String,
+      default:()=>'yyyy-MM-dd'
     }
   },
   directives:{
@@ -71,8 +79,14 @@ export default {
   },
   computed:{
     formatValue(){
-      let {year,month,day} = getYearMonthDay(this.value)
-      return `${year}-${month+1>9 ? month+1: '0'+(month+1)}-${day>9? day: '0'+(day)}`
+      console.log(this.value)
+      if (typeof this.value === 'string') {
+         return  this.value ? this.value :''
+      }else{
+         let {year,month,day} = getYearMonthDay(this.value) 
+         return  this.value ? `${year}-${month+1>9 ? month+1: '0'+(month+1)}-${day>9? day: '0'+(day)}` : ''
+      }
+     
     },
     visiableDays(){
       // 当前月的1号 周几
@@ -111,7 +125,9 @@ export default {
       return year == y && month == m && day == d
     },
     chooseDay(date){
-      this.$emit('input',date)
+      // 把 date 转成字符串 传出去
+      let str = dateFormat(this.valueFormat, date)
+      this.$emit('input',str)
       this.visiable = false
     },
     prevMonth(){
