@@ -4,12 +4,12 @@
     <fa-input v-model="formatValue" readonly :placeholder="placeholder"></fa-input>
     <div class="fa-datepicker__select" v-if="visiable">
       <div class="fa-datepicker__select__nav">
-        <div>&lt;</div>
+        <div @click="prevYear">&lt;</div>
         <div @click="prevMonth">&lt;&lt;</div>
         <div>{{curYear}}年</div>
         <div>{{curMonth+1}}月</div>
         <div @click="nextMonth">&gt;&gt;</div>
-        <div>&gt;</div>
+        <div @click="nextYear">&gt;</div>
       </div>
       <div class="fa-datepicker__select__content">
           <div class="fa-datepicker__select__content__week">
@@ -146,6 +146,15 @@ export default {
         this.curMonth = 0
       }
       
+    },
+    prevYear(){
+      if (this.curYear>1900) {
+        this.curYear = this.curYear -1
+      }
+      
+    },
+    nextYear(){
+      this.curYear = this.curYear +1
     }
   }
 }

@@ -90,3 +90,37 @@ disabled属性可以设置输入框的禁用状态
   <<< @/docs/.vuepress/components/example/textarea4.vue
 </demo-block>
 
+配置项:
+
+|  参数   | 说明  | 类型  | 可选值  | 默认值  |
+|  ----  | ----  | ----  | ----  |  ----  |
+| type  | 输入框的类型 | String | text/password/textarea | text |
+| size  | 输入框的大小 | String | large/small/normal | normal |
+| disabled  | 输入框是否是禁用状态 | Boolean | true/false | false |
+| placeholder  | 输入框的提示信息 | String | - | - |
+| readonly  | 输入框是否是只读状态 | Boolean | true/false | false |
+| v-model  | 输入框的值（双向绑定） | String | - | - |
+| clearable | 输入框拥有清空按钮 | Boolean | true/false | false |
+| prefixIcon | 输入框前部的icon名称 | String | - | - |
+| suffixIcon | 输入框尾部的icon名称 | String | - | - |
+| rows | textarea的初始化宽 | String | - | - |
+| cols | textarea的初始化高 | String | - | - |
+| autosize | textarea可以自适应宽高 | Boolean | true/false | false |
+| autosize | textarea可以自适应宽高，可以设置对象形式 如 :autosize="{min:'200',max:'400'}" | Object | - | - |
+
+slot
+
+|  name   | 说明  |
+| suffix | 输入框尾部内容，只对 type="text" 有效 | 
+| prefix | 输入框头部内容，只对 type="text" 有效 |
+
+Input Events
+
+|  事件名称   | 说明  | 回调参数 |
+| blur | 	在 Input 失去焦点时触发  | 	(value: string | number) |
+| focus | 在 Input 获得焦点时触发 | 	(value: string | number) |
+| change |	仅在输入框失去焦点或用户按下回车时触发 | 	(value: string | number) |
+| input | 在 Input 值改变时触发 | 	(value: string | number) |
+
+
+

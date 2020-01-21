@@ -32,5 +32,14 @@
   <<< @/docs/.vuepress/components/example/button4.vue
 </demo-block>
 
+其他的配置项 如下
 
+|  参数   | 说明  | 类型  | 可选值  | 默认值  |
+|  ----  | ----  | ----  | ----  |  ----  |
+| size  | 按钮的大小 | String | large/medium/small | medium |
+| type  | 按钮的类型 | String | primary/danger/warning/success | - |
+| plain  | 是否是文字边框按钮类型 | Boolean | true/false | false |
+| shiny  | 按钮是否拥有闪闪发光的效果 | Boolean | true/false | false |
+| disabled  | 按钮是否是禁用状态 | Boolean | true/false | false |
+| icon  | icon图标名称 | String | - | - |
 

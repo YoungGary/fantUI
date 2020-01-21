@@ -25,9 +25,5 @@ import {
 Vue.component(Icon.name, Icon)
 Vue.component(Button.name, Button)
 ```
-### 样式
 
-```js
-import "vue-fantui/style/index.scss";
-```
 

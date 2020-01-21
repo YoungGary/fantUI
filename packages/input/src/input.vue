@@ -110,8 +110,18 @@ export default {
       type: String,
       default: ""
     },
-    rows: String,
-    cols: String,
+    rows: {
+      type: String,
+      default: item => {
+        return item;
+      },
+    },
+    cols: {
+      type: String,
+      default: item => {
+        return item;
+      },
+    },
     autosize: [Boolean, Object], // 高度自适应
   },
   data() {

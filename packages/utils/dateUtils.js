@@ -1,3 +1,5 @@
+
+// 传进来一个date 类型的 参数 或者是个字符串  返回 年 月 日的数字
 const getYearMonthDay = (date)=>{
     // console.log(typeof date)
     if (typeof date === 'object') {
@@ -8,7 +10,7 @@ const getYearMonthDay = (date)=>{
     }else if(typeof date === 'string' && date !== ''){
         let strTime = date;    //字符串日期格式             
         let datedate = new Date(Date.parse(strTime.replace(/-/g,  "/")));  
-        console.log(date)
+        // console.log(date)
         let year = datedate.getFullYear();
         let month = datedate.getMonth();
         let day = datedate.getDate()
@@ -26,28 +28,6 @@ const getYearMonthDay = (date)=>{
 const getDate = (year,month,day)=>{
     return new Date(year,month,day)
 }
-
-// const dateFormat2 = (fmt, date)=> {
-//     let ret;
-//     let opt = {
-//         "Y+": date.getFullYear().toString(),        // 年
-//         "m+": (date.getMonth() + 1).toString(),     // 月
-//         "d+": date.getDate().toString(),            // 日
-//         "H+": date.getHours().toString(),           // 时
-//         "M+": date.getMinutes().toString(),         // 分
-//         "S+": date.getSeconds().toString()          // 秒
-//         // 有其他格式化字符需求可以继续添加，必须转化成字符串
-//     };
-//     for (let k in opt) {
-//         ret = new RegExp("(" + k + ")").exec(fmt);
-//         if (ret) {
-//             fmt = fmt.replace(ret[1], (ret[1].length == 1) ? (opt[k]) : (opt[k].padStart(ret[1].length, "0")))
-//         }
-//     }
-//     return fmt;
-// }
-
-
 
 const dateFormat = function(fmt,date){
     var o = {
