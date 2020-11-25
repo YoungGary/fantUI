@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
-    "highlight.js": "^9.17.1",
+    "highlight.js": "^10.1.2",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "vue": "^2.6.10",
