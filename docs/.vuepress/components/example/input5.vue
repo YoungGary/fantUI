@@ -1,19 +1,21 @@
 <template>
   <div>
-    <fa-icon name="back" color="red" />
-    <fa-icon name="distance" color="#ceff23" />
-    <fa-icon name="wifi" size="40" />
+    <fa-input type="text" clearable  v-model="input2" placeholder="请输入"></fa-input> 
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      
+        input2:"", 
+
     }
   },
   mounted () {
     import('./iconfont.js').then(icon => {})
   },
+  methods:{
+
+  }
 }
 </script>

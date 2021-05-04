@@ -39,6 +39,8 @@ module.exports = {
           '/widget/button',
           '/widget/toast',
           '/widget/loading',
+          '/widget/input',
+          '/widget/datePicker',
         ]
       }
     ]

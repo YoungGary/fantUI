@@ -1,0 +1,61 @@
+@import './common/mixin.scss';
+
+@include declare(datepicker){
+  
+    font-size: 14px;
+    display: inline-block;
+    .fa-datepicker__select{
+        min-width: 230px;
+        min-height: 220px;
+        position: absolute;
+        padding: 5px;
+        border: 1px solid #e4e7ed;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+        background: #fff;
+        border-radius: 4px;
+        z-index: 2;
+        margin-top: 2px;
+        .fa-datepicker__select__nav{
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .fa-datepicker__select__content{
+            .fa-datepicker__select__content__week{
+                border-bottom: 1px solid #ebeef5;
+                .weekcell{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 44px;
+                    width: 44px; 
+                }
+            }
+            .cell{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                height: 44px;
+                width: 44px;
+                cursor: pointer;
+                user-select: none;
+                color:#c0c4cc;
+            }
+            .currentMonth.cell{
+                color: #606266;
+            }
+            .cell:hover{
+                color: $--color-primary;
+            }
+            .currentDay.cell{
+                color: #fff;
+                background-color: $--color-primary;
+                border-radius: 22px;
+            }
+            
+        }
+    }
+}

@@ -4,18 +4,19 @@ import Toast from './toast'
 import ToastVue from './toast/src/index'
 import Button from './button'
 import Loading from './loading'
+import Input from './input'
+import DatePicker from './datePicker'
 // 引入样式
 import '../style/index.scss';
 //引入 iconfont
 import '../style/iconfont/iconfont'
 
-const components = [Icon,Toast,Button,Loading] ;
+const components = [Icon,Toast,Button,Loading,Input,DatePicker] ;
 
 let fantUI = {
   install(Vue) {
     components.forEach(component => {
       Vue.component(component.name, component);
-      // console.log(component)
     });
     //全局引用的时候toast方法绑定
     Vue.prototype.$showToast = function(options) {
@@ -59,15 +60,10 @@ let fantUI = {
             }
         })
     }
-
-
-    
   }
 };
 export default fantUI;
 
 export  {
-  Icon,
-  Toast,
-  Button
+  Icon,Toast,Button,Loading,Input,DatePicker
 }

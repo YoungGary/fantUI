@@ -25,15 +25,16 @@ $--button-success-bg-color:linear-gradient(to bottom, #85f38c 0%,#61d568 30%, #0
 $--button-warning-bg-color:linear-gradient(to bottom, #fdd49a 0%,#fdc26d 30%, #ff9600 100%);
 $--button-danger-bg-color:linear-gradient(to bottom, #fd90a0 0%,#fd6177 30%, #ff0024 100%);
 // 四种type的背景图片地址 白底的
-$--bg-primary-w-image:url('https://imgkr.cn-bj.ufileos.com/f02a5904-1b1e-4345-901d-eb9bd80a8701.png');
-$--bg-success-w-image:url('https://imgkr.cn-bj.ufileos.com/d018a3dd-9fae-4eb6-ab48-eccd9187afdf.png');
-$--bg-warning-w-image:url('https://imgkr.cn-bj.ufileos.com/37fb3440-1777-4ad7-840c-845295bcc39d.png');
-$--bg-danger-w-image:url('https://imgkr.cn-bj.ufileos.com/209a1afd-ff90-4a32-b7cd-fe2be1154a82.png');
+$--bg-primary-w-image:url('https://imgkr.cn-bj.ufileos.com/68678351-bae2-4ece-80af-4b4752fa9dfa.png');
+$--bg-success-w-image:url('https://imgkr.cn-bj.ufileos.com/98600adf-fe38-4df8-8a95-64517badad25.png');
+$--bg-warning-w-image:url('https://imgkr.cn-bj.ufileos.com/7106d015-42d2-4d6c-bfe2-bcfa92e7abc2.png');
+$--bg-danger-w-image:url('https://imgkr.cn-bj.ufileos.com/c702a0f7-4870-450c-bbc3-3e5c31599796.png');
 // 四种type 在plain 样式下的 背景图
-$--bg-primary-image:url('https://imgkr.cn-bj.ufileos.com/5ee5795f-6b99-4ecb-b4d3-b9c52a407fe5.png');
-$--bg-success-image:url('https://imgkr.cn-bj.ufileos.com/30e7ac72-28c5-4ccb-a23b-ee1e569afafd.png');
-$--bg-warning-image:url('https://imgkr.cn-bj.ufileos.com/e1ccae97-c5f0-41a7-bec4-de07e5037d25.png');
-$--bg-danger-image:url('https://imgkr.cn-bj.ufileos.com/8ac60b63-14ca-4aaa-8421-f7078c47edff.png');
+$--bg-primary-image:url('https://imgkr.cn-bj.ufileos.com/3e14bd15-3aeb-40b1-b01f-71dc51ccc0ff.png');
+$--bg-success-image:url('https://imgkr.cn-bj.ufileos.com/b7415136-8394-423b-a3ea-2885a89cfb96.png');
+$--bg-warning-image:url('https://imgkr.cn-bj.ufileos.com/8f3e5270-d4ca-4645-9f2a-3649f884779a.png');
+$--bg-danger-image:url('https://imgkr.cn-bj.ufileos.com/1776124d-2238-43a7-8928-3d6c9e59ab17.png');
 // 四种type 在plain 样式下的 文字颜色 和 主色调一样
 
-
+//input
+$--color-input-placeholder:#aaa;
